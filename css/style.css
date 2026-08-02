@@ -48,10 +48,12 @@ header{
 
 .logo{
 
-    width:90px;
-    height:90px;
+    width:70px;
+    height:70px;
     object-fit:contain;
-    border-radius:15px;
+    border-radius:10px;
+
+}
 
 }
 
