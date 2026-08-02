@@ -1,88 +1,200 @@
 /* Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
+
     font-family: Tahoma, Arial, sans-serif;
     color: #333;
     background: #fff;
+    direction: rtl;
+
 }
+
+
+/* Container */
+
+.container {
+
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+
+}
+
 
 
 /* Header */
 
-header {
+.header {
+
     width: 100%;
     background: #ffffff;
     border-bottom: 1px solid #eee;
+
     position: sticky;
     top: 0;
     z-index: 1000;
+
 }
 
 
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    padding: 15px 20px;
+
+.header .container {
+
+    height: 80px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
+
 
 
 /* Logo */
 
 .logo img {
-    width: 120px;
+
+    width: 90px;
     height: auto;
     display: block;
+
 }
+
 
 
 /* Menu */
 
-.nav-menu {
+.nav {
+
     display: flex;
-    list-style: none;
-    gap: 35px;
+    align-items: center;
+    gap: 30px;
+
 }
 
 
-.nav-menu li a {
+
+.nav a {
+
     text-decoration: none;
     color: #0B2348;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
+
 }
 
 
-.nav-menu li a:hover {
+
+.nav a:hover {
+
     color: #FFC21A;
+
 }
+
 
 
 /* Order Button */
 
-.order-btn {
+.header-btn {
+
     background: #FFC21A;
-    color: #0B2348;
-    padding: 12px 25px;
+
+    color: #0B2348 !important;
+
+    padding: 12px 22px;
+
     border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
+
 }
 
 
-/* Mobile Menu Button */
+
+/* Mobile Button */
 
 .menu-toggle {
+
     display: none;
+
+    background: none;
+
+    border: none;
+
     font-size: 28px;
+
     color: #0B2348;
-    cursor: pointer;
+
+}
+
+
+
+/* Mobile Menu */
+
+@media (max-width:768px){
+
+
+.header .container {
+
+    height: 70px;
+
+}
+
+
+
+.logo img {
+
+    width: 75px;
+
+}
+
+
+
+.nav {
+
+    display: none;
+
+}
+
+
+
+.menu-toggle {
+
+    display: block;
+
+}
+
+
+
+.nav.active {
+
+    display: flex;
+
+    position: absolute;
+
+    top: 70px;
+
+    right: 0;
+
+    width: 100%;
+
+    background: white;
+
+    flex-direction: column;
+
+    padding: 25px 0;
+
+    gap: 20px;
+
+    border-top: 1px solid #eee;
+
+}
+
+
 }
