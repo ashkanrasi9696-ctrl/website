@@ -1,5 +1,5 @@
 /* فایل استایل سایت Teksun */
 .logo img {
-    width: 120px;
-    height: auto;
+    width: 100px !important;
+    height: auto !important;
 }
