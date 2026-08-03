@@ -10,10 +10,160 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+
+<style>
+
+.checkout-product{
+
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:#f8fafc;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+
+}
+
+
+
+.checkout-product img{
+
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    border-radius:15px;
+
+}
+
+
+
+.checkout-info{
+
+    flex:1;
+
+}
+
+
+
+.checkout-info h3{
+
+    margin-bottom:10px;
+
+}
+
+
+
+.checkout-info p{
+
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+
+
+.checkout-info span{
+
+    display:inline-block;
+    margin-top:10px;
+    background:#FFC21A;
+    color:#0B2348;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:13px;
+
+}
+
+
+
+.order-title{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.order-title h3{
+
+    margin-bottom:5px;
+
+}
+
+
+
+.order-title p{
+
+    color:#555;
+
+}
+
+
+
+.checkout-features{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+
+}
+
+
+
+.checkout-features div{
+
+    background:#f8fafc;
+    padding:15px;
+    text-align:center;
+    border-radius:15px;
+    font-size:14px;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.checkout-product{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+
+
+.checkout-product img{
+
+    width:150px;
+    height:150px;
+
+}
+
+
+
+.checkout-features{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+</style>
+
+
 </head>
 
 
+
 <body>
+
 
 
 <header>
@@ -41,7 +191,9 @@
 
 
 <h2 class="section-title">
+
 تکمیل سفارش
+
 </h2>
 
 
@@ -51,34 +203,49 @@
 
 
 
+
+
 <div class="checkout-product">
 
 
-<img id="product-image" src="images/product-20w.jpg" alt="محصول">
+<img id="product-image" 
+src="images/product-20w.jpg" 
+alt="محصول">
+
 
 
 <div class="checkout-info">
 
 
 <h3 id="product-name">
+
 محصول انتخابی
+
 </h3>
 
 
+
 <p id="product-price">
+
 قیمت محصول
+
 </p>
 
 
+
 <span>
+
 ✔ موجود در انبار
+
 </span>
 
 
 </div>
 
 
+
 </div>
+
 
 
 
@@ -88,13 +255,20 @@
 
 <div class="order-title">
 
+
 <h3>
+
 اطلاعات ارسال
+
 </h3>
 
+
 <p>
-برای ثبت سفارش، اطلاعات زیر را وارد کنید.
+
+لطفاً اطلاعات خود را برای ثبت سفارش وارد کنید.
+
 </p>
+
 
 </div>
 
@@ -103,7 +277,9 @@
 
 
 
+
 <form>
+
 
 
 <input 
@@ -120,12 +296,10 @@ required>
 
 
 
-
 <textarea 
 placeholder="آدرس کامل"
 rows="4"
 required></textarea>
-
 
 
 
@@ -146,6 +320,7 @@ required>
 
 
 
+
 </form>
 
 
@@ -159,29 +334,43 @@ required>
 
 
 <div>
+
 🔒
+
 <br>
+
 پرداخت امن
+
 </div>
 
 
 
 <div>
+
 🚚
+
 <br>
+
 ارسال سریع
+
 </div>
 
 
 
 <div>
+
 ☀️
+
 <br>
+
 محصول اصلی Teksun
+
 </div>
 
 
+
 </div>
+
 
 
 
@@ -199,13 +388,20 @@ required>
 
 
 
+
 <footer>
 
+
 <p>
+
 © 2026 Teksun - تمامی حقوق محفوظ است.
+
 </p>
 
+
 </footer>
+
+
 
 
 
