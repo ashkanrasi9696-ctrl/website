@@ -8,7 +8,7 @@
 
 <title>ثبت سفارش | Teksun</title>
 
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -22,7 +22,7 @@
 
 <div class="logo">
 
-<img src="../images/Picsart_26-08-02_20-04-55-030.jpg" alt="Teksun">
+<img src="images/Picsart_26-08-02_20-04-55-030.jpg" alt="Teksun">
 
 </div>
 
@@ -41,15 +41,23 @@
 
 
 <h2 class="section-title">
-ثبت سفارش
+تکمیل سفارش
 </h2>
+
 
 
 
 <div class="checkout-box">
 
 
+
 <div class="checkout-product">
+
+
+<img id="product-image" src="images/product-20w.jpg" alt="محصول">
+
+
+<div class="checkout-info">
 
 
 <h3 id="product-name">
@@ -58,8 +66,16 @@
 
 
 <p id="product-price">
-قیمت
+قیمت محصول
 </p>
+
+
+<span>
+✔ موجود در انبار
+</span>
+
+
+</div>
 
 
 </div>
@@ -68,30 +84,105 @@
 
 
 
+
+
+<div class="order-title">
+
+<h3>
+اطلاعات ارسال
+</h3>
+
+<p>
+برای ثبت سفارش، اطلاعات زیر را وارد کنید.
+</p>
+
+</div>
+
+
+
+
+
+
 <form>
 
 
-<input type="text" placeholder="نام و نام خانوادگی" required>
+<input 
+type="text" 
+placeholder="نام و نام خانوادگی"
+required>
 
 
-<input type="tel" placeholder="شماره تماس" required>
+
+<input 
+type="tel" 
+placeholder="شماره تماس"
+required>
 
 
-<textarea placeholder="آدرس کامل" rows="4" required></textarea>
 
 
-<input type="text" placeholder="کد پستی" required>
+<textarea 
+placeholder="آدرس کامل"
+rows="4"
+required></textarea>
+
+
+
+
+<input 
+type="text" 
+placeholder="کد پستی"
+required>
+
+
 
 
 
 <button class="btn" type="submit">
 
-ادامه پرداخت
+پرداخت و ثبت سفارش
 
 </button>
 
 
+
 </form>
+
+
+
+
+
+
+
+
+<div class="checkout-features">
+
+
+<div>
+🔒
+<br>
+پرداخت امن
+</div>
+
+
+
+<div>
+🚚
+<br>
+ارسال سریع
+</div>
+
+
+
+<div>
+☀️
+<br>
+محصول اصلی Teksun
+</div>
+
+
+</div>
+
 
 
 
@@ -102,6 +193,7 @@
 
 
 </section>
+
 
 
 
@@ -118,6 +210,9 @@
 
 
 
+
+
+
 <script>
 
 
@@ -128,25 +223,33 @@ const products = {
 
 name:"شارژر خورشیدی تاشو ۲۰ وات",
 
-price:"5,490,000 تومان"
+price:"5,490,000 تومان",
+
+image:"images/product-20w.jpg"
 
 },
+
 
 
 "40w": {
 
 name:"شارژر خورشیدی تاشو ۴۰ وات",
 
-price:"8,240,000 تومان"
+price:"8,240,000 تومان",
+
+image:"images/product-40w.jpg"
 
 },
+
 
 
 "60w": {
 
 name:"شارژر خورشیدی تاشو ۶۰ وات",
 
-price:"10,980,000 تومان"
+price:"10,980,000 تومان",
+
+image:"images/product-60w.jpg"
 
 }
 
@@ -155,10 +258,14 @@ price:"10,980,000 تومان"
 
 
 
+
+
 const params = new URLSearchParams(window.location.search);
 
 
 const selectedProduct = params.get("product");
+
+
 
 
 
@@ -174,11 +281,17 @@ document.getElementById("product-price").innerHTML =
 "قیمت: " + products[selectedProduct].price;
 
 
+
+document.getElementById("product-image").src =
+products[selectedProduct].image;
+
+
 }
 
 
 
 </script>
+
 
 
 
