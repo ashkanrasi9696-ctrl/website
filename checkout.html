@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ثبت سفارش | Teksun</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="container header-content">
+
+<div class="logo">
+
+<img src="../images/Picsart_26-08-02_20-04-55-030.jpg" alt="Teksun">
+
+</div>
+
+</div>
+
+</header>
+
+
+
+
+
+<section class="checkout">
+
+
+<div class="container">
+
+
+<h2 class="section-title">
+ثبت سفارش
+</h2>
+
+
+
+<div class="checkout-box">
+
+
+<div class="checkout-product">
+
+
+<h3 id="product-name">
+محصول انتخابی
+</h3>
+
+
+<p id="product-price">
+قیمت
+</p>
+
+
+</div>
+
+
+
+
+
+<form>
+
+
+<input type="text" placeholder="نام و نام خانوادگی" required>
+
+
+<input type="tel" placeholder="شماره تماس" required>
+
+
+<textarea placeholder="آدرس کامل" rows="4" required></textarea>
+
+
+<input type="text" placeholder="کد پستی" required>
+
+
+
+<button class="btn" type="submit">
+
+ادامه پرداخت
+
+</button>
+
+
+</form>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 Teksun - تمامی حقوق محفوظ است.
+</p>
+
+</footer>
+
+
+
+
+<script>
+
+
+const products = {
+
+
+"20w": {
+
+name:"شارژر خورشیدی تاشو ۲۰ وات",
+
+price:"5,490,000 تومان"
+
+},
+
+
+"40w": {
+
+name:"شارژر خورشیدی تاشو ۴۰ وات",
+
+price:"8,240,000 تومان"
+
+},
+
+
+"60w": {
+
+name:"شارژر خورشیدی تاشو ۶۰ وات",
+
+price:"10,980,000 تومان"
+
+}
+
+
+};
+
+
+
+const params = new URLSearchParams(window.location.search);
+
+
+const selectedProduct = params.get("product");
+
+
+
+if(products[selectedProduct]){
+
+
+document.getElementById("product-name").innerHTML =
+products[selectedProduct].name;
+
+
+
+document.getElementById("product-price").innerHTML =
+"قیمت: " + products[selectedProduct].price;
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
