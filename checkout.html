@@ -278,11 +278,11 @@ alt="محصول">
 
 
 
-<form>
-
+<form id="order-form">
 
 
 <input 
+id="fullname"
 type="text" 
 placeholder="نام و نام خانوادگی"
 required>
@@ -290,6 +290,7 @@ required>
 
 
 <input 
+id="phone"
 type="tel" 
 placeholder="شماره تماس"
 required>
@@ -297,6 +298,7 @@ required>
 
 
 <textarea 
+id="address"
 placeholder="آدرس کامل"
 rows="4"
 required></textarea>
@@ -304,11 +306,10 @@ required></textarea>
 
 
 <input 
+id="postal"
 type="text" 
 placeholder="کد پستی"
 required>
-
-
 
 
 
@@ -319,17 +320,7 @@ required>
 </button>
 
 
-
-
 </form>
-
-
-
-
-
-
-
-
 <div class="checkout-features">
 
 
@@ -486,7 +477,116 @@ products[selectedProduct].image;
 
 
 
+
+
+
+
+// اعتبارسنجی فرم سفارش
+
+
+const form = document.getElementById("order-form");
+
+
+
+form.addEventListener("submit", function(e){
+
+
+e.preventDefault();
+
+
+
+const fullname = document.getElementById("fullname").value.trim();
+
+const phone = document.getElementById("phone").value.trim();
+
+const address = document.getElementById("address").value.trim();
+
+const postal = document.getElementById("postal").value.trim();
+
+
+
+
+
+if(fullname.length < 3){
+
+
+alert("لطفاً نام و نام خانوادگی صحیح وارد کنید");
+
+
+return;
+
+
+}
+
+
+
+
+
+const phoneRegex = /^09[0-9]{9}$/;
+
+
+
+if(!phoneRegex.test(phone)){
+
+
+alert("شماره تماس باید ۱۱ رقم باشد و با 09 شروع شود");
+
+
+return;
+
+
+}
+
+
+
+
+
+
+if(address.length < 10){
+
+
+alert("لطفاً آدرس کامل وارد کنید");
+
+
+return;
+
+
+}
+
+
+
+
+
+
+const postalRegex = /^[0-9]{10}$/;
+
+
+
+if(!postalRegex.test(postal)){
+
+
+alert("کد پستی باید ۱۰ رقم باشد");
+
+
+return;
+
+
+}
+
+
+
+
+
+alert("اطلاعات با موفقیت تایید شد. آماده اتصال به پرداخت هستیم.");
+
+
+
+});
+
+
+
 </script>
+
 
 
 
